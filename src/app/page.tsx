@@ -13,9 +13,8 @@ export default function HomePage() {
     <main id="main-content" className="app-shell">
       <section className="library-hero">
         <div className="hero-copy">
-          <p className="eyebrow">ලොව්තුරු අරණ සදහම් පුස්තකාලය</p>
-          <h1>සදහම් ප්‍රකාශන එකම තැනකින් කියවන්න</h1>
-          <p>සදහම් පොත්, පත්‍රිකා, ලිඛිත දේශනා සහ දේශනා සුචි පහසුවෙන් සොයා PDF ලෙස කියවීමට හෝ බාගැනීමට සකස් කළ නාමාවලියකි.</p>
+          <h1 className="hero-title">ලොව්තුරු අරණ සදහම් පුස්තකාලය</h1>
+          <p>අනුරාධපුර කටුකැලියායේ ශ්‍රී අරණ විහාර වාසී පූජ්‍යපාද මාපලගම සුසිලවංශ හිමියන් විසින් රචිත සහ උන්වහන්සේගේ සද්ධර්ම දේශනා ඇසුරින් සම්පාදනය කර ඇති සදහම් පොත්, පත්‍රිකා, ලිඛිත දේශනා සහ දේශනා සුචි පහසුවෙන් සොයා PDF ලෙස කියවීමට හෝ බාගැනීමට සකස් කළ නාමාවලියකි.</p>
           <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශන සොයන්න</label><input id="home-search" type="search" name="q" placeholder="මාතෘකාවක් හෝ වචනයක් සොයන්න…" /><button type="submit">සොයන්න →</button></form>
           <div className="hero-actions">
             <Link className="button-primary" href="/publications">ප්‍රකාශන සොයන්න</Link>
