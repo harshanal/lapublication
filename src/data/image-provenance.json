@@ -1,0 +1,15 @@
+{
+  "series": "pabasara-sitha",
+  "method": "Built-in image_gen tool",
+  "createdOn": "2026-10-30",
+  "prompt": "Use case: illustration-story. Asset type: portrait 4:5 shared series thumbnail for the Lowthuru Arana Sinhala Buddhist reading library. Primary request: a refined recurring visual identity for the Pabasara Sitha series, whose title evokes the luminous mind. Subject: a single luminous ivory lotus opening above still water, delicate concentric reflections and quiet dawn light as an abstract symbol of clarity. Composition: balanced vertical editorial cover art, lotus in the lower middle, restrained dark maroon upper space, antique gold light and muted olive accents; graceful natural detail, subtle handmade paper grain, dignified and calm, recognisable at small thumbnail sizes. No text, no lettering, no book mockup, no people, no Buddha or monk figures, no watermark. The same artwork will be reused across the two parts; titles and part numbers are rendered separately by the website.",
+  "outputPath": "public/library/series/pabasara-sitha.png",
+  "usage": "Shared artwork for parts I and II; titles remain HTML text.",
+  "hero": {
+    "method": "Built-in image_gen tool",
+    "createdOn": "2026-10-30",
+    "prompt": "Use the existing 'නිවන යනු මනසේ නිවීමයි' book cover as the main visual reference for a fresh homepage illustration. Create a serene front-facing Buddha head in a delicate graphite, charcoal, and translucent ivory-grey watercolour style, with a faint mandala halo, soft cloud and lotus edges, and very small maroon and antique-gold accents. Keep the background genuinely transparent and omit all cover text, logos, borders, watermarks, bright glow, full body, hands, and heavy saturated robes.",
+    "outputPath": "public/library/generated/buddha-hero.png",
+    "usage": "Decorative responsive artwork in the homepage hero."
+  }
+}

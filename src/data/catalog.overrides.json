@@ -1,0 +1,77 @@
+{
+  "publications": {
+    "11vWdS1t4mbX7OHqsJZmUX7-XEq0oPgi_": {
+      "seriesId": "pabasara-sitha",
+      "thumbnailMode": "series",
+      "thumbnailTitle": "පබසර සිත",
+      "thumbnailSubtitle": "I · පළමු කොටස",
+      "title": "පබසර සිත i - අස්සුතවා, සුතවා සූත්‍ර - පභස‍්සරමිදං භික‍්ඛවෙ චිත‍්තං 01",
+      "summary": "",
+      "author": null,
+      "publicationDate": null,
+      "categoryId": "1rhZyqlE59z04Y87rLcgjFMUX7yYMLRgs",
+      "language": "si",
+      "status": "published",
+      "featured": false,
+      "tags": []
+    },
+    "1wcVjcXhvCL77iHwYLnUUi5_tpgoY_I1l": {
+      "seriesId": "pabasara-sitha",
+      "thumbnailMode": "series",
+      "thumbnailTitle": "පබසර සිත",
+      "thumbnailSubtitle": "II · දෙවන කොටස"
+    },
+    "1sOX_dtS0bVNmpY4TAlDjOJobz13qvQHx": {
+      "title": "නිවන යනු මනසේ නිවීමයි දෙවෙනි සැකසුම",
+      "summary": "",
+      "author": null,
+      "publicationDate": null,
+      "categoryId": "1rTV7SDQ6OOdiTS_wO0_ZmOko20X8pfi8",
+      "language": "si",
+      "status": "published",
+      "featured": true,
+      "seriesId": null,
+      "tags": [],
+      "thumbnailMode": "auto"
+    }
+  },
+  "files": {
+    "1a6ccYjlRzZZzf6_HNWgnXxvkLop6UmxL": {
+      "role": "cover",
+      "publicationId": "1sOX_dtS0bVNmpY4TAlDjOJobz13qvQHx"
+    },
+    "1Ycjosw4akLxoN-srIqj4asKYFAvj_Jj9": {
+      "role": "cover",
+      "publicationId": "1F32NcYcay8XAwJDwt5SYkJMO3Vpn9qAN"
+    },
+    "1sfLa3QMEXHJKHA-Pm2r4zFPrd9sHVtoV": {
+      "role": "ignore"
+    },
+    "1NMcH2WBY3oUevGRmZN4yYb9cOj5Cvryb": {
+      "role": "ignore"
+    },
+    "1Y7fZeRz4Op1vw-FWj6-jJipp7d2yvI0o": {
+      "role": "ignore"
+    },
+    "1xrlFU4Fp2BJkujCqu9dhUMfgnUY_WY14": {
+      "role": "cover",
+      "publicationId": "1z2-3eZNSlvHfqOQT25XzJ6PWiTWvDhAK"
+    },
+    "180SHYf_w71Cn5Hw4DY9_U7Mrrv8yrdh3": {
+      "role": "ignore"
+    },
+    "1K7JRDv3Q-xXCspk8aQygS6f5oLXkOLMK": {
+      "role": "cover",
+      "publicationId": "1bXM9GWeIjm43ZEkAT_Dwi1StnUUa_n71"
+    }
+  },
+  "series": [
+    {
+      "id": "pabasara-sitha",
+      "name": "පබසර සිත",
+      "description": "පබසර සිත ප්‍රකාශන මාලාව",
+      "imagePrompt": "A luminous calm mind suggested by a single white lotus opening over still water; soft dawn light, subtle gold rings of reflection, deep maroon upper background. Identical composition for both parts.",
+      "thumbnailUrl": "/library/series/pabasara-sitha.png"
+    }
+  ]
+}
