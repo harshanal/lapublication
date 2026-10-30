@@ -8,11 +8,7 @@ export const metadata: Metadata = {
     default: "ලොව්තුරු අරණ ප්‍රකාශන",
     template: "%s | ලොව්තුරු අරණ ප්‍රකාශන"
   },
-  description: "ලොව්තුරු අරණ සදහම් පොත්, පත්‍රිකා සහ ලිඛිත දේශනා නාමාවලිය.",
-  icons: {
-    icon: [{ url: "/lowthuruarana-icon.jpg", type: "image/jpeg" }],
-    apple: [{ url: "/lowthuruarana-icon.jpg", type: "image/jpeg" }]
-  }
+  description: "ලොව්තුරු අරණ සදහම් පොත්, පත්‍රිකා සහ ලිඛිත දේශනා නාමාවලිය."
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
