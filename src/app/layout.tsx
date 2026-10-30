@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav className="main-nav" aria-label="ප්‍රධාන සංචාලනය">
             <Link href="/publications">සියලු ප්‍රකාශන</Link>
-            <Link href="/publications?saved=1">♡ Saved</Link>
+            <Link href="/publications?saved=1">♡ Bookmark</Link>
             <a href="https://lowthuruarana.net/">ප්‍රධාන වෙබ් අඩවිය</a>
           </nav>
         </header>
