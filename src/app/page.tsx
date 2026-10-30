@@ -14,12 +14,25 @@ export default function HomePage() {
       <section className="library-hero">
         <div className="hero-copy">
           <h1 className="hero-title">ලොව්තුරු අරණ සදහම් පුස්තකාලය</h1>
-          <p>අනුරාධපුර කටුකැලියායේ ශ්‍රී අරණ විහාර වාසී පූජ්‍යපාද මාපලගම සුසිලවංශ හිමියන් විසින් රචිත සහ උන්වහන්සේගේ සද්ධර්ම දේශනා ඇසුරින් සම්පාදනය කර ඇති සදහම් පොත්, පත්‍රිකා, ලිඛිත දේශනා සහ දේශනා සුචි පහසුවෙන් සොයා PDF ලෙස කියවීමට හෝ බාගැනීමට සකස් කළ නාමාවලියකි.</p>
+          <div className="hero-description">
+            <p>බුදුරජාණන් වහන්සේ විසින් දේශිත ශ්‍රී සද්ධර්මය අනාගත පරපුර වෙනුවෙන් සුරක්ෂිත කරමින්, ධර්මාවබෝධය අපේක්ෂා කරන සියලු දෙනාගේ ප්‍රයෝජනය පිණිස සකස් කරන ලද ලොව්තුරු අරණ සදහම් පුස්තකාලය වෙත ඔබ සැම සාදරයෙන් පිළිගනිමු.</p>
+            <p>අනුරාධපුර, කටුකැලියේ ශ්‍රී අරණ විහාරවාසී පූජ්‍යපාද මාපලගම සුසිලවංශ හිමිපාණන් වහන්සේ විසින් රචිත සදහම් ග්‍රන්ථ මෙන්ම, උන්වහන්සේගේ අර්ථපූර්ණ සද්ධර්ම දේශනා ඇසුරින් සම්පාදනය කරන ලද පොත්පත්, පත්‍රිකා, ලිඛිත ධර්ම දේශනා සහ දේශනා සුචි ද මෙහි අන්තර්ගත වේ.</p>
+            <p>මෙම නාමාවලිය තුළින් සදහම් ග්‍රන්ථ හා දේශනා පහසුවෙන් සොයාගෙන, PDF ආකාරයෙන් කියවීමට හෝ බාගත කරගැනීමට අවස්ථාව සලසා ඇත.</p>
+            <p>ධර්මය ශ්‍රවණය කිරීමෙන්, කියවීමෙන්, විමසීමෙන් හා නුවණින් මෙනෙහි කිරීමෙන් සම්මා දිට්ඨිය වර්ධනය කරගෙන, නිවන් මඟ අවබෝධ කරගැනීමට මෙම සදහම් පුස්තකාලය සියලු දෙනාට උපකාරී වේවා!</p>
+            <p>මෙම උතුම් ධර්ම දානය සියලු සත්වයන්ගේ නිවන් අවබෝධය පිණිසම හේතු වාසනා වේවා!</p>
+          </div>
           <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශන සොයන්න</label><input id="home-search" type="search" name="q" placeholder="මාතෘකාවක් හෝ වචනයක් සොයන්න…" /><button type="submit">ප්‍රකාශන සොයන්න</button></form>
         </div>
-        <div className="hero-artwork" aria-hidden="true">
-          <Image src="/library/generated/buddha-hero.png" alt="" width={1154} height={1216} priority />
-        </div>
+        <figure className="hero-artwork">
+          <Image src="/library/generated/buddha-hero.png" alt="" aria-hidden="true" width={1154} height={1216} priority />
+          <figcaption className="hero-quote">
+            <blockquote>
+              <p>“සබ්බදානං ධම්මදානං ජිනාති”</p>
+              <p>“සියලු දානයන් අතර ධර්ම දානය උතුම් වන්නේය.”</p>
+            </blockquote>
+            <cite>(ධම්මපදය)</cite>
+          </figcaption>
+        </figure>
       </section>
 
       {library.isDemo ? (
