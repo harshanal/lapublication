@@ -11,7 +11,6 @@ export function PublicationCard({ publication }: { publication: Publication }) {
     <article className="publication-card">
       <Link className="publication-cover" href={`/publications/${publication.slug}`} aria-label={`${publication.title} කියවන්න`}>
         <PublicationThumbnail publication={publication} />
-        <span className="language-pill">{publication.language === "en" ? "EN" : "සිං"}</span>
       </Link>
       <div className="publication-card-body">
         <Link className="category-label" href={`/category/${publication.categorySlug}`}>

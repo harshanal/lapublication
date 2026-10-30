@@ -10,7 +10,6 @@ export function CatalogueBrowser({ publications, categories, series = [] }: { pu
   const query = params.get("q") ?? "";
   const needle = normalizeSearch(useDeferredValue(query));
   const category = params.get("category") ?? "";
-  const language = params.get("language") ?? "";
   const seriesId = params.get("series") ?? "";
   const savedOnly = params.get("saved") === "1";
   const view = params.get("view") === "list" ? "list" : "grid";
@@ -23,15 +22,14 @@ export function CatalogueBrowser({ publications, categories, series = [] }: { pu
   const tokens = needle.split(/\s+/u).filter(Boolean);
   const filtered = publications.filter((p) => {
     const text = normalizeSearch([p.title, p.author, p.summary, p.categoryName, ...(p.tags ?? []), series.find((s) => s.id === p.seriesId)?.name].filter(Boolean).join(" "));
-    return tokens.every((token) => text.includes(token)) && (!category || p.categorySlug === category) && (!language || p.language === language) && (!seriesId || p.seriesId === seriesId) && (!savedOnly || saved.includes(p.id));
+    return tokens.every((token) => text.includes(token)) && (!category || p.categorySlug === category) && (!seriesId || p.seriesId === seriesId) && (!savedOnly || saved.includes(p.id));
   }).sort((a, b) => -1 * (a.publicationDate ?? a.modifiedTime ?? "").localeCompare(b.publicationDate ?? b.modifiedTime ?? ""));
-  const active = !!(query || category || language || seriesId || savedOnly);
+  const active = !!(query || category || seriesId || savedOnly);
   const reset = () => window.history.replaceState(null, "", window.location.pathname);
   return <>
     <section className="catalogue-controls" aria-label="ප්‍රකාශන සෙවුම් සහ Filters">
       <label className="search-field"><span>ප්‍රකාශන සොයන්න</span><input type="search" value={query} onChange={(e) => update("q", e.target.value)} placeholder="මාතෘකාව, කර්තෘ හෝ වචනයක්…" /></label>
       {categories.length > 1 ? <label><span>Category</span><select value={category} onChange={(e) => update("category", e.target.value)}><option value="">සියලු Categories</option>{categories.map((c) => <option key={c.id} value={c.slug}>{c.name} ({c.publicationCount})</option>)}</select></label> : null}
-      <label><span>භාෂාව</span><select value={language} onChange={(e) => update("language", e.target.value)}><option value="">සියලු භාෂා</option><option value="si">සිංහල</option><option value="en">English</option></select></label>
     </section>
     <div className="results-heading"><strong role="status">Results {filtered.length}</strong><div className="view-controls"><button type="button" aria-pressed={savedOnly} onClick={() => update("saved", savedOnly ? "" : "1")}>♡ Bookmark</button><button type="button" aria-label="කවර ලෙස බලන්න" aria-pressed={view === "grid"} onClick={() => update("view", "")}>▦</button><button type="button" aria-label="ලැයිස්තුව ලෙස බලන්න" aria-pressed={view === "list"} onClick={() => update("view", "list")}>☷</button>{active ? <button type="button" onClick={reset}>Filter ඉවත් කරන්න</button> : null}</div></div>
     {savedOnly ? <p className="small-note">Bookmark කළ ප්‍රකාශන මෙම browser එකේ පමණක් තබාගනී.</p> : null}
