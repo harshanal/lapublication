@@ -28,7 +28,7 @@ export function CatalogueBrowser({ publications, categories, series = [] }: { pu
   const reset = () => window.history.replaceState(null, "", window.location.pathname);
   return <>
     <section className="catalogue-controls" aria-label="ප්‍රකාශන සෙවුම් සහ Filters">
-      <label className="search-field"><span>ප්‍රකාශන සොයන්න</span><input type="search" value={query} onChange={(e) => update("q", e.target.value)} placeholder="මාතෘකාව, කර්තෘ හෝ වචනයක්…" /></label>
+      <label className="search-field"><span>ප්‍රකාශනය සොයන්න</span><input type="search" value={query} onChange={(e) => update("q", e.target.value)} placeholder="ප්‍රකාශන මාතෘකාව සොයන්න…" /></label>
       {categories.length > 1 ? <label><span>Category</span><select value={category} onChange={(e) => update("category", e.target.value)}><option value="">සියලු Categories</option>{categories.map((c) => <option key={c.id} value={c.slug}>{c.name} ({c.publicationCount})</option>)}</select></label> : null}
     </section>
     <div className="results-heading"><strong role="status">Results {filtered.length}</strong><div className="view-controls"><button type="button" aria-pressed={savedOnly} onClick={() => update("saved", savedOnly ? "" : "1")}>♡ Bookmark</button><button type="button" aria-label="කවර ලෙස බලන්න" aria-pressed={view === "grid"} onClick={() => update("view", "")}>▦</button><button type="button" aria-label="ලැයිස්තුව ලෙස බලන්න" aria-pressed={view === "list"} onClick={() => update("view", "list")}>☷</button>{active ? <button type="button" onClick={reset}>Filter ඉවත් කරන්න</button> : null}</div></div>

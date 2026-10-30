@@ -21,7 +21,7 @@ export default function HomePage() {
             <p>ධර්මය ශ්‍රවණය කිරීමෙන්, කියවීමෙන්, විමසීමෙන් හා නුවණින් මෙනෙහි කිරීමෙන් සම්මා දිට්ඨිය වර්ධනය කරගෙන, නිවන් මඟ අවබෝධ කරගැනීමට මෙම සදහම් පුස්තකාලය සියලු දෙනාට උපකාරී වේවා!</p>
             <p>මෙම උතුම් ධර්ම දානය සියලු සත්වයන්ගේ නිවන් අවබෝධය පිණිසම හේතු වාසනා වේවා!</p>
           </div>
-          <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශන සොයන්න</label><input id="home-search" type="search" name="q" placeholder="මාතෘකාවක් හෝ වචනයක් සොයන්න…" /><button type="submit">ප්‍රකාශන සොයන්න</button></form>
+          <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශනය සොයන්න</label><input id="home-search" type="search" name="q" placeholder="ප්‍රකාශන මාතෘකාව සොයන්න…" /><button type="submit">ප්‍රකාශනය සොයන්න</button></form>
         </div>
         <figure className="hero-artwork">
           <Image src="/library/generated/buddha-hero.png" alt="" aria-hidden="true" width={1154} height={1216} priority />
