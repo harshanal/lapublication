@@ -13,7 +13,7 @@ export function PdfReader({ url, title, downloadUrl }: { url: string; title: str
     } catch { setMessage("පූර්ණ තිරය සඳහා Google Drive සබැඳිය විවෘත කරන්න."); }
   }
   return <section ref={container} className="pdf-reader" aria-label={`${title} PDF කියවනය`}>
-    <div className="reader-toolbar"><span>PDF කියවනය</span><button type="button" onClick={fullscreen}>පූර්ණ තිරය</button><a href={openUrl} target="_blank" rel="noopener noreferrer">වෙනම විවෘත කරන්න ↗</a><a href={downloadUrl} target="_blank" rel="noopener noreferrer">බාගන්න ↗</a></div>
+    <div className="reader-toolbar"><span>PDF කියවනය</span><button type="button" onClick={fullscreen}>Full screen</button><a href={openUrl} target="_blank" rel="noopener noreferrer">වෙනම විවෘත කරන්න ↗</a><a href={downloadUrl} target="_blank" rel="noopener noreferrer">Download ↗</a></div>
     <p className="reader-help">{message || "කියවනය නොපෙනේ නම් වෙනම විවෘත කරන්න හෝ PDF ගොනුව බාගන්න."}</p>
     {!loaded ? <p className="reader-help" role="status">PDF ගොනුව විවෘත කරමින්…</p> : null}
     <div className="reader-stage"><iframe src={url} title={title} onLoad={() => setLoaded(true)} allowFullScreen /></div>
