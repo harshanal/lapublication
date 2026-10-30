@@ -15,19 +15,11 @@ export default function HomePage() {
         <div className="hero-copy">
           <h1 className="hero-title">ලොව්තුරු අරණ සදහම් පුස්තකාලය</h1>
           <p>අනුරාධපුර කටුකැලියායේ ශ්‍රී අරණ විහාර වාසී පූජ්‍යපාද මාපලගම සුසිලවංශ හිමියන් විසින් රචිත සහ උන්වහන්සේගේ සද්ධර්ම දේශනා ඇසුරින් සම්පාදනය කර ඇති සදහම් පොත්, පත්‍රිකා, ලිඛිත දේශනා සහ දේශනා සුචි පහසුවෙන් සොයා PDF ලෙස කියවීමට හෝ බාගැනීමට සකස් කළ නාමාවලියකි.</p>
-          <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශන සොයන්න</label><input id="home-search" type="search" name="q" placeholder="මාතෘකාවක් හෝ වචනයක් සොයන්න…" /><button type="submit">සොයන්න →</button></form>
-          <div className="hero-actions">
-            <Link className="button-primary" href="/publications">ප්‍රකාශන සොයන්න</Link>
-            <a className="button-secondary" href="https://lowthuruarana.net/">ප්‍රධාන වෙබ් අඩවිය</a>
-          </div>
+          <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශන සොයන්න</label><input id="home-search" type="search" name="q" placeholder="මාතෘකාවක් හෝ වචනයක් සොයන්න…" /><button type="submit">ප්‍රකාශන සොයන්න</button></form>
         </div>
         <div className="hero-artwork" aria-hidden="true">
           <Image src="/library/generated/buddha-hero.png" alt="" width={1154} height={1216} priority />
         </div>
-        <dl className="metric-grid">
-          <div><dt>ප්‍රකාශන</dt><dd>{library.publications.length.toLocaleString("si-LK")}</dd></div>
-          <div><dt>Categories</dt><dd>{library.categories.length.toLocaleString("si-LK")}</dd></div>
-        </dl>
       </section>
 
       {library.isDemo ? (
