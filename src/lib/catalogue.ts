@@ -17,11 +17,13 @@ export function applyOverrides(source: LibraryData, overrides: CatalogueOverride
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(publication.slug) || slugs.has(publication.slug)) throw new Error(`Invalid or duplicate URL slug: ${publication.slug}`);
     ids.add(publication.id);
     slugs.add(publication.slug);
-    const generated = `/library/generated/${item.id}.png`;
+    const generated = ["webp", "png", "jpg", "jpeg"]
+      .map((extension) => `/library/generated/${item.id}.${extension}`)
+      .find((url) => assets.has(url)) ?? null;
     const seriesCover = series.find((s) => s.id === publication.seriesId)?.thumbnailUrl;
     const candidates = {
       cover: item.coverThumbnailUrl,
-      generated: assets.has(generated) ? generated : null,
+      generated,
       series: seriesCover && assets.has(seriesCover) ? seriesCover : null,
       page: item.pageThumbnailUrl
     };

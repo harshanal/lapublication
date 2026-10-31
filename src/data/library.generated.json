@@ -463,12 +463,15 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/1Ymr3CN6bmq3ApGHXDCKW6-xRygOTh6iv/preview",
       "downloadUrl": "https://drive.google.com/uc?id=1Ymr3CN6bmq3ApGHXDCKW6-xRygOTh6iv&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-1Ymr3CN6bmq3ApGHXDCKW6-xRygOTh6iv.jpg",
+      "thumbnailUrl": "/library/generated/1Ymr3CN6bmq3ApGHXDCKW6-xRygOTh6iv.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-1Ymr3CN6bmq3ApGHXDCKW6-xRygOTh6iv.jpg",
       "fileSize": 440091,
       "modifiedTime": "2022-09-12T20:10:26.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "නිබ්බාන පටිපදා",
+      "thumbnailSubtitle": "2022 සැප්තැම්බර්",
+      "thumbnailSource": "generated"
     },
     {
       "id": "1mapgUeITsQXKGC_V6q9gbkzSIi_VbV4I",
@@ -486,12 +489,14 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/1mapgUeITsQXKGC_V6q9gbkzSIi_VbV4I/preview",
       "downloadUrl": "https://drive.google.com/uc?id=1mapgUeITsQXKGC_V6q9gbkzSIi_VbV4I&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-1mapgUeITsQXKGC_V6q9gbkzSIi_VbV4I.jpg",
+      "thumbnailUrl": "/library/generated/1mapgUeITsQXKGC_V6q9gbkzSIi_VbV4I.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-1mapgUeITsQXKGC_V6q9gbkzSIi_VbV4I.jpg",
       "fileSize": 295550,
       "modifiedTime": "2022-04-16T14:34:34.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "මහ සෑ රඳුන් වන්දනා කරමු",
+      "thumbnailSource": "generated"
     },
     {
       "id": "1qXIbVt0MA0Xonr1IWt7MvZ12B62Fr1UW",
@@ -509,12 +514,14 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/1qXIbVt0MA0Xonr1IWt7MvZ12B62Fr1UW/preview",
       "downloadUrl": "https://drive.google.com/uc?id=1qXIbVt0MA0Xonr1IWt7MvZ12B62Fr1UW&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-1qXIbVt0MA0Xonr1IWt7MvZ12B62Fr1UW.jpg",
+      "thumbnailUrl": "/library/generated/1qXIbVt0MA0Xonr1IWt7MvZ12B62Fr1UW.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-1qXIbVt0MA0Xonr1IWt7MvZ12B62Fr1UW.jpg",
       "fileSize": 426094,
       "modifiedTime": "2021-09-23T07:30:52.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "සෝවාන් ඵලය",
+      "thumbnailSource": "generated"
     },
     {
       "id": "1qD0geaUIVMS-9ujZz4PHKE7VmyIugaOM",
@@ -532,12 +539,14 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/1qD0geaUIVMS-9ujZz4PHKE7VmyIugaOM/preview",
       "downloadUrl": "https://drive.google.com/uc?id=1qD0geaUIVMS-9ujZz4PHKE7VmyIugaOM&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-1qD0geaUIVMS-9ujZz4PHKE7VmyIugaOM.jpg",
+      "thumbnailUrl": "/library/generated/1qD0geaUIVMS-9ujZz4PHKE7VmyIugaOM.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-1qD0geaUIVMS-9ujZz4PHKE7VmyIugaOM.jpg",
       "fileSize": 625091,
       "modifiedTime": "2021-07-22T19:53:10.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "නිබ්බාන පටිපදා",
+      "thumbnailSource": "generated"
     },
     {
       "id": "1lNstU8nboGJ154glQilRniWZcivi0Mam",
@@ -555,12 +564,15 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/1lNstU8nboGJ154glQilRniWZcivi0Mam/preview",
       "downloadUrl": "https://drive.google.com/uc?id=1lNstU8nboGJ154glQilRniWZcivi0Mam&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-1lNstU8nboGJ154glQilRniWZcivi0Mam.jpg",
+      "thumbnailUrl": "/library/generated/1lNstU8nboGJ154glQilRniWZcivi0Mam.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-1lNstU8nboGJ154glQilRniWZcivi0Mam.jpg",
       "fileSize": 519093,
       "modifiedTime": "2021-04-10T02:00:42.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "ද්වයතානුපස්සනාව",
+      "thumbnailSubtitle": "නව සංස්කරණය",
+      "thumbnailSource": "generated"
     },
     {
       "id": "17n3kLG3ifKX2ituYnFotd9D5r4H9043G",
@@ -578,12 +590,15 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/17n3kLG3ifKX2ituYnFotd9D5r4H9043G/preview",
       "downloadUrl": "https://drive.google.com/uc?id=17n3kLG3ifKX2ituYnFotd9D5r4H9043G&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-17n3kLG3ifKX2ituYnFotd9D5r4H9043G.jpg",
+      "thumbnailUrl": "/library/generated/17n3kLG3ifKX2ituYnFotd9D5r4H9043G.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-17n3kLG3ifKX2ituYnFotd9D5r4H9043G.jpg",
       "fileSize": 584285,
       "modifiedTime": "2021-03-30T13:34:24.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "පංච උපාදානස්කන්ධය",
+      "thumbnailSubtitle": "2021 මාර්තු 30",
+      "thumbnailSource": "generated"
     },
     {
       "id": "14utPMcQfKIRY_HqSHGXwodJOot4QVxDA",
@@ -601,12 +616,15 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/14utPMcQfKIRY_HqSHGXwodJOot4QVxDA/preview",
       "downloadUrl": "https://drive.google.com/uc?id=14utPMcQfKIRY_HqSHGXwodJOot4QVxDA&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-14utPMcQfKIRY_HqSHGXwodJOot4QVxDA.jpg",
+      "thumbnailUrl": "/library/generated/14utPMcQfKIRY_HqSHGXwodJOot4QVxDA.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-14utPMcQfKIRY_HqSHGXwodJOot4QVxDA.jpg",
       "fileSize": 11519876,
       "modifiedTime": "2021-03-27T12:14:06.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "සියලු කෙළෙස් නැසීම",
+      "thumbnailSubtitle": "සබ්බාසව සූත්‍රය · නව සංස්කරණය",
+      "thumbnailSource": "generated"
     },
     {
       "id": "14ExXkQf5bBQJQ0SU3Cmo0fSRwd6Pb9Ct",
@@ -624,12 +642,14 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/14ExXkQf5bBQJQ0SU3Cmo0fSRwd6Pb9Ct/preview",
       "downloadUrl": "https://drive.google.com/uc?id=14ExXkQf5bBQJQ0SU3Cmo0fSRwd6Pb9Ct&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-14ExXkQf5bBQJQ0SU3Cmo0fSRwd6Pb9Ct.jpg",
+      "thumbnailUrl": "/library/generated/14ExXkQf5bBQJQ0SU3Cmo0fSRwd6Pb9Ct.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-14ExXkQf5bBQJQ0SU3Cmo0fSRwd6Pb9Ct.jpg",
       "fileSize": 377022,
       "modifiedTime": "2021-03-01T04:58:40.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "අනුලෝම ක්ෂාන්තිය හා සම්මත්ත නියාමය",
+      "thumbnailSource": "generated"
     },
     {
       "id": "1Wr4R5CaJF637X4cievY_8WPodLdt3kai",
@@ -647,12 +667,14 @@
       "status": "published",
       "pdfUrl": "https://drive.google.com/file/d/1Wr4R5CaJF637X4cievY_8WPodLdt3kai/preview",
       "downloadUrl": "https://drive.google.com/uc?id=1Wr4R5CaJF637X4cievY_8WPodLdt3kai&export=download",
-      "thumbnailUrl": "/library/thumbnails/page-1Wr4R5CaJF637X4cievY_8WPodLdt3kai.jpg",
+      "thumbnailUrl": "/library/generated/1Wr4R5CaJF637X4cievY_8WPodLdt3kai.webp",
       "coverThumbnailUrl": null,
       "pageThumbnailUrl": "/library/thumbnails/page-1Wr4R5CaJF637X4cievY_8WPodLdt3kai.jpg",
       "fileSize": 688714,
       "modifiedTime": "2021-03-01T04:58:18.000Z",
-      "thumbnailSource": "page"
+      "thumbnailMode": "generated",
+      "thumbnailTitle": "ආස්වාද ආදීනව නිස්සරණ",
+      "thumbnailSource": "generated"
     },
     {
       "id": "15tNQQ65e-bLBruHatG_5EH4n9Sah6qrU",
