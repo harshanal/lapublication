@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildCounts, categorySlug, cleanTitle, inferRole, publicationSlug } from "./sync-utils";
+import { buildCounts, categorySlug, cleanTitle, duplicateContentPairs, inferRole, publicationSlug } from "./sync-utils";
 
 describe("Drive catalogue inference", () => {
   it("recognizes cover and correction files", () => {
@@ -30,5 +30,14 @@ describe("Drive catalogue inference", () => {
       { id: "leaflets", name: "Leaflets", slug: "sadaham-pathrika" },
       { id: "books", name: "Books", slug: "sadaham-poth" }
     ], []).map((category) => category.slug)).toEqual(["sadaham-poth", "sadaham-pathrika", "wenath-prakashana"]);
+  });
+
+  it("detects the same PDF uploaded again under a different name", () => {
+    const files = [
+      { name: "පළමු නම.pdf", md5Checksum: "ABC123" },
+      { name: "වෙනත් නම.pdf", md5Checksum: "abc123" },
+      { name: "වෙනත් ලිපිය.pdf", md5Checksum: "def456" }
+    ];
+    expect(duplicateContentPairs(files)).toEqual([{ original: files[0], duplicate: files[1] }]);
   });
 });

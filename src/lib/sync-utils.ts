@@ -71,6 +71,19 @@ export function publicationSlug(id: string, title: string, previous?: string) {
   return previous || asciiSlug(title) || `publication-${id.replace(/[^a-z0-9]/gi, "").slice(0, 12).toLowerCase()}`;
 }
 
+export function duplicateContentPairs<T extends { name: string; md5Checksum?: string }>(files: T[]) {
+  const firstByHash = new Map<string, T>();
+  const duplicates: Array<{ original: T; duplicate: T }> = [];
+  for (const file of files) {
+    if (!file.md5Checksum) continue;
+    const hash = file.md5Checksum.toLowerCase();
+    const original = firstByHash.get(hash);
+    if (original) duplicates.push({ original, duplicate: file });
+    else firstByHash.set(hash, file);
+  }
+  return duplicates;
+}
+
 export function buildCounts(categories: Omit<Category, "publicationCount">[], publications: Publication[]): Category[] {
   return [...categories]
     .sort((left, right) => {

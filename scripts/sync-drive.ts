@@ -4,12 +4,12 @@ import { mkdir, writeFile, rename } from "node:fs/promises";
 import { resolve } from "node:path";
 import sharp from "sharp";
 import { createHash } from "node:crypto";
-import { buildCounts, categorySlug, cleanTitle, inferRole, publicationSlug } from "../src/lib/sync-utils";
+import { buildCounts, categorySlug, cleanTitle, duplicateContentPairs, inferRole, publicationSlug } from "../src/lib/sync-utils";
 import { compareCatalogues } from "../src/lib/catalogue";
 import { atomicJson, paths, readJson, rebuildCatalogue } from "./catalogue-store";
 import type { CatalogueOverrides, LibraryData, Publication } from "../src/lib/types";
 
-type DriveFile = { id: string; name: string; mimeType: string; size?: string; modifiedTime?: string; thumbnailLink?: string; webContentLink?: string; categoryId: string; categoryName: string; parentId: string };
+type DriveFile = { id: string; name: string; mimeType: string; size?: string; md5Checksum?: string; modifiedTime?: string; thumbnailLink?: string; webContentLink?: string; categoryId: string; categoryName: string; parentId: string };
 export type DrivePreview = { scannedAt: string; configurationSignature: string; library: LibraryData; files: DriveFile[]; changes: ReturnType<typeof compareCatalogues> };
 const rootId = () => process.env.GOOGLE_DRIVE_ROOT_FOLDER_ID || "13c8bRvGo7Q8PXgodwPIULewzQfsjP0Nq";
 const assetsId = () => process.env.GOOGLE_DRIVE_ASSETS_FOLDER_ID || "";
@@ -35,7 +35,7 @@ async function children(folderId: string) {
   let pageToken = "";
   do {
     const result = await googleJson<{ files: DriveFile[]; nextPageToken?: string }>(apiUrl("files", {
-      q: `'${folderId}' in parents and trashed = false`, fields: "nextPageToken,files(id,name,mimeType,size,modifiedTime,thumbnailLink,webContentLink)", pageSize: "1000", ...(pageToken ? { pageToken } : {})
+      q: `'${folderId}' in parents and trashed = false`, fields: "nextPageToken,files(id,name,mimeType,size,md5Checksum,modifiedTime,thumbnailLink,webContentLink)", pageSize: "1000", ...(pageToken ? { pageToken } : {})
     }));
     files.push(...result.files);
     pageToken = result.nextPageToken ?? "";
@@ -75,6 +75,8 @@ export async function scanDrive(): Promise<DrivePreview> {
   if (assetsId()) await walkAssets(assetsId());
   const role = (file: DriveFile) => overrides.files?.[file.id]?.role ?? inferRole(file.name, file.mimeType);
   const mains = scanned.filter((f) => f.mimeType === "application/pdf" && role(f) === "main");
+  const duplicate = duplicateContentPairs(mains)[0];
+  if (duplicate) throw new Error(`Duplicate PDF content: "${duplicate.duplicate.name}" matches "${duplicate.original.name}". Keep one publication and mark the other file as ignore.`);
   const old = new Map(previous.publications.map((p) => [p.id, p]));
   const slugs = new Set<string>();
   const ids = new Set<string>();
