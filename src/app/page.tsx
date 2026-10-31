@@ -2,12 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { CategoryTile } from "@/components/CategoryTile";
 import { PublicationCard } from "@/components/PublicationCard";
+import { selectVariedPublications } from "@/lib/homepage-selection";
 import { library } from "@/lib/library";
 
 export default function HomePage() {
   const books = library.publications.filter((publication) => publication.categorySlug === "sadaham-poth");
   const leaflets = library.publications.filter((publication) => publication.categorySlug === "sadaham-pathrika").slice(0, 4);
-  const otherPublications = library.publications.filter((publication) => !["sadaham-poth", "sadaham-pathrika"].includes(publication.categorySlug)).slice(0, 8);
+  const otherPublications = selectVariedPublications(
+    library.publications.filter((publication) => !["sadaham-poth", "sadaham-pathrika"].includes(publication.categorySlug)),
+    8,
+    library.syncedAt ?? "lowthuru-arana-library"
+  );
 
   return (
     <main id="main-content" className="app-shell">
