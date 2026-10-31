@@ -62,5 +62,21 @@
         "outputPath": "public/library/generated/1Wr4R5CaJF637X4cievY_8WPodLdt3kai.webp"
       }
     ]
+  },
+  "categoryBackgrounds": {
+    "method": "Built-in image_gen tool",
+    "createdOn": "2026-10-31",
+    "usage": "Responsive decorative backgrounds for the eight homepage category tiles. Each image keeps its complete symbolic motif on the right and a quiet area behind the accessible HTML title on the left.",
+    "style": "Wide symbolic editorial illustrations with distinct gradients and handmade-paper texture; no Buddha, human figure, embedded lettering, or watermark.",
+    "assets": [
+      { "category": "සදහම් පොත්", "motif": "Ivory lotus and blank manuscript leaves", "outputPath": "public/library/category-backgrounds/sadaham-poth.webp" },
+      { "category": "ලිඛිත දේශනා", "motif": "Bodhi leaf and flowing calligraphic curves", "outputPath": "public/library/category-backgrounds/likhitha-deshana.webp" },
+      { "category": "සදහම් පත්‍රිකා", "motif": "Blank paper forms becoming a path and leaf", "outputPath": "public/library/category-backgrounds/sadaham-pathrika.webp" },
+      { "category": "පුවත්පත් ලිපි", "motif": "Abstract paper strips, ink circle, and ruled lines", "outputPath": "public/library/category-backgrounds/puwathpath-lipi.webp" },
+      { "category": "වන්දනා පොත් සහ පත්‍රිකා", "motif": "Complete brass oil lamp with lotus and jasmine offerings", "outputPath": "public/library/category-backgrounds/wandana-poth-saha-pathrika.webp" },
+      { "category": "ලොව්තුරු අරණ දේශනා සුචි", "motif": "Ordered circular index with concentric paths", "outputPath": "public/library/category-backgrounds/deshana-suchi.webp" },
+      { "category": "English publications", "motif": "Open blank book and luminous celestial globe", "outputPath": "public/library/category-backgrounds/english-publications.webp" },
+      { "category": "වෙනත් ප්‍රකාශන", "motif": "Interlocking abstract forms and leaves", "outputPath": "public/library/category-backgrounds/wenath-prakashana.webp" }
+    ]
   }
 }

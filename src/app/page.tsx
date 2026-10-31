@@ -47,7 +47,7 @@ export default function HomePage() {
         <aside className="notice-band"><strong>ආරම්භක නාමාවලිය</strong><span>මෙය දැනට Drive එකතුවෙන් තෝරාගත් ආරම්භක දත්ත වේ. සම්පූර්ණ එකතුව සඳහා දේශීය <code>pnpm sync:drive</code> ක්‍රියාවලිය ධාවනය කරන්න.</span></aside>
       ) : null}
 
-      <section className="section-band">
+      <section id="categories" className="section-band">
         <div className="section-heading"><div><p className="eyebrow">Categories</p><h2>ඔබට අවශ්‍ය සදහම් ප්‍රකාශනය තෝරන්න</h2></div><Link href="/publications">සියලු ප්‍රකාශන</Link></div>
         <div className="category-grid">{library.categories.map((category, index) => <CategoryTile key={category.id} category={category} index={index} />)}</div>
       </section>
