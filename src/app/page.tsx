@@ -4,6 +4,9 @@ import { CategoryTile } from "@/components/CategoryTile";
 import { PublicationCard } from "@/components/PublicationCard";
 import { selectVariedPublications } from "@/lib/homepage-selection";
 import { library } from "@/lib/library";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function HomePage() {
   const books = library.publications.filter((publication) => publication.categorySlug === "sadaham-poth");

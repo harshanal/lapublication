@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CatalogueBrowser } from "@/components/CatalogueBrowser";
 import { getCategory, library } from "@/lib/library";
+import type { Metadata } from "next";
 export const dynamicParams = false;
 export function generateStaticParams() { return library.categories.map((c) => ({ slug: c.slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; return { title: getCategory(slug)?.name ?? "Category" }; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const category = getCategory(slug); return { title: category?.name ?? "Category", description: category ? `${category.name} — ලොව්තුරු අරණ සදහම් ප්‍රකාශන ${category.publicationCount}` : undefined, alternates: { canonical: `/category/${slug}` } }; }
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const category = getCategory(slug);

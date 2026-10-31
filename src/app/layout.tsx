@@ -1,14 +1,31 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "ලොව්තුරු අරණ ප්‍රකාශන",
-    template: "%s | ලොව්තුරු අරණ ප්‍රකාශන"
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`
   },
-  description: "ලොව්තුරු අරණ සදහම් පොත්, පත්‍රිකා සහ ලිඛිත දේශනා නාමාවලිය."
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "si_LK",
+    url: "/",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/library/generated/buddha-hero.png", alt: SITE_NAME }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: ["/library/generated/buddha-hero.png"]
+  }
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
