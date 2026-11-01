@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-10-31T01:44:24.755Z",
+  "syncedAt": "2026-11-01T06:08:02.103Z",
   "sourceFolderUrl": "https://drive.google.com/drive/folders/13c8bRvGo7Q8PXgodwPIULewzQfsjP0Nq",
   "isDemo": false,
   "categories": [
@@ -26,7 +26,7 @@
       "id": "1DthYI_gQsld_VoXvhpSC4KxUa5eAw0Q9",
       "name": "පුවත්පත් ලිපි",
       "slug": "puwathpath-lipi",
-      "publicationCount": 7
+      "publicationCount": 8
     },
     {
       "id": "1rMI9f3cpgg-_G_BlzV0kQe_utbv-f85q",
@@ -97,6 +97,28 @@
       "pageThumbnailUrl": "/library/thumbnails/page-1bcS69_VlRAHZfBANlNoSONEfak6sufsx.jpg",
       "fileSize": 5235216,
       "modifiedTime": "2024-04-12T19:54:34.000Z"
+    },
+    {
+      "id": "1fZgsXg4cdK3B-1elAGnDguOer9gSGWY6",
+      "driveFileId": "1fZgsXg4cdK3B-1elAGnDguOer9gSGWY6",
+      "title": "විශ්වයේ මහා මංගල්‍යය – විජය – වෙසක් 2023",
+      "slug": "2023",
+      "categoryId": "1DthYI_gQsld_VoXvhpSC4KxUa5eAw0Q9",
+      "categoryName": "පුවත්පත් ලිපි",
+      "categorySlug": "puwathpath-lipi",
+      "author": null,
+      "publicationDate": null,
+      "summary": "",
+      "language": "si",
+      "featured": false,
+      "status": "published",
+      "pdfUrl": "https://drive.google.com/file/d/1fZgsXg4cdK3B-1elAGnDguOer9gSGWY6/preview",
+      "downloadUrl": "https://drive.google.com/uc?id=1fZgsXg4cdK3B-1elAGnDguOer9gSGWY6&export=download",
+      "thumbnailUrl": null,
+      "coverThumbnailUrl": null,
+      "pageThumbnailUrl": "/library/thumbnails/page-1fZgsXg4cdK3B-1elAGnDguOer9gSGWY6.jpg",
+      "fileSize": 1670231,
+      "modifiedTime": "2026-11-01T06:07:29.733Z"
     },
     {
       "id": "1mtEdVuPoqqx45EJD_kF0PAGnk6BHV33z",

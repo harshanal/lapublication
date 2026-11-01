@@ -74,6 +74,22 @@
       "tags": [],
       "thumbnailMode": "auto"
     },
+    "1fZgsXg4cdK3B-1elAGnDguOer9gSGWY6": {
+      "title": "විශ්වයේ මහා මංගල්‍යය",
+      "slug": "wishwaye-maha-mangalyaya-vesak-2023",
+      "summary": "2023 වෙසක් සමය වෙනුවෙන් විජය පුවත්පතේ පළ වූ, බුදුරජාණන් වහන්සේගේ තෙමඟුල, ධර්මචරියාව සහ සැබෑ බුද්ධ පූජාව පිළිබඳ සදහම් ලිපියකි.",
+      "author": "පූජ්‍යපාද මාපලගම සුසිලවංශ හිමිපාණන් වහන්සේ",
+      "publicationDate": "2023-05-02",
+      "categoryId": "1DthYI_gQsld_VoXvhpSC4KxUa5eAw0Q9",
+      "language": "si",
+      "status": "published",
+      "featured": false,
+      "seriesId": "wijaya",
+      "tags": ["විජය", "වෙසක්", "2023", "බුද්ධ පූජාව", "ධර්මචරියාව", "පුවත්පත් ලිපි"],
+      "thumbnailMode": "page",
+      "thumbnailTitle": "විශ්වයේ මහා මංගල්‍යය",
+      "thumbnailSubtitle": "විජය · වෙසක් 2023"
+    },
     "19XLyhjZimNKyV6qsnMM4UR4h1Yiy85uQ": {
       "title": "පංචස්කන්ධ ක්‍රියාවලිය",
       "slug": "panchaskandha-kriyawaliya-duruthu-2026",
@@ -229,6 +245,11 @@
       "id": "rangiri-sri-lanka",
       "name": "රංගිරි ශ්‍රී ලංකා පුවත්පත් ලිපි",
       "description": "රංගිරි ශ්‍රී ලංකා පුවත්පතේ පළ වූ සදහම් ලිපි එකතුව"
+    },
+    {
+      "id": "wijaya",
+      "name": "විජය පුවත්පත් ලිපි",
+      "description": "විජය පුවත්පතේ පළ වූ සදහම් ලිපි එකතුව"
     }
   ]
 }
