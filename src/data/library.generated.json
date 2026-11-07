@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-11-01T21:51:39.240Z",
+  "syncedAt": "2026-11-07T16:27:46.035Z",
   "sourceFolderUrl": "https://drive.google.com/drive/folders/13c8bRvGo7Q8PXgodwPIULewzQfsjP0Nq",
   "isDemo": false,
   "categories": [
@@ -8,7 +8,7 @@
       "id": "1rTV7SDQ6OOdiTS_wO0_ZmOko20X8pfi8",
       "name": "සදහම් පොත්",
       "slug": "sadaham-poth",
-      "publicationCount": 3
+      "publicationCount": 4
     },
     {
       "id": "1riBDcWWI0vzdaEK3eD51reDPlXDq--iE",
@@ -846,6 +846,42 @@
       "pageThumbnailUrl": "/library/thumbnails/page-1bXM9GWeIjm43ZEkAT_Dwi1StnUUa_n71.jpg",
       "fileSize": 592914,
       "modifiedTime": "2021-07-30T12:53:06.000Z",
+      "thumbnailSource": "cover"
+    },
+    {
+      "id": "1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9",
+      "driveFileId": "1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9",
+      "title": "තිසරණ සරණ",
+      "slug": "thisarana-sarana",
+      "categoryId": "1rTV7SDQ6OOdiTS_wO0_ZmOko20X8pfi8",
+      "categoryName": "සදහම් පොත්",
+      "categorySlug": "sadaham-poth",
+      "author": "පූජ්‍යපාද මාපලගම සුසිලවංශ හිමිපාණන් වහන්සේ",
+      "publicationDate": null,
+      "summary": "නිවන් මඟ අවබෝධ කරගැනීමට උනන්දුවන පාඨකයන්ගේ ප්‍රශ්න හා පිළිතුරු ඇසුරින්, පටිච්චසමුප්පාදය, චතුරාර්ය සත්‍යය සහ ත්‍රිලක්ෂණය ප්‍රායෝගිකව විග්‍රහ කරන සදහම් ග්‍රන්ථයකි. පළමු මුද්‍රණය: 2026 නොවැම්බර්. ISBN 978-624-204-348-7.",
+      "language": "si",
+      "featured": true,
+      "status": "published",
+      "pdfUrl": "https://drive.google.com/file/d/1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9/preview",
+      "downloadUrl": "https://drive.google.com/uc?id=1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9&export=download",
+      "thumbnailUrl": "/library/thumbnails/cover-1iG4AfkPqCNjU1yXM-xpWT8NlALRacNus.jpg",
+      "coverThumbnailUrl": "/library/thumbnails/cover-1iG4AfkPqCNjU1yXM-xpWT8NlALRacNus.jpg",
+      "pageThumbnailUrl": "/library/thumbnails/page-1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9.jpg",
+      "fileSize": 964875,
+      "modifiedTime": "2026-11-07T16:25:52.927Z",
+      "tags": [
+        "තිසරණ සරණ",
+        "2026 නොවැම්බර්",
+        "පළමු මුද්‍රණය",
+        "පටිච්චසමුප්පාදය",
+        "චතුරාර්ය සත්‍යය",
+        "ත්‍රිලක්ෂණය",
+        "නිවන් මඟ"
+      ],
+      "thumbnailMode": "cover",
+      "thumbnailFileId": "1iG4AfkPqCNjU1yXM-xpWT8NlALRacNus",
+      "thumbnailTitle": "තිසරණ සරණ",
+      "thumbnailSubtitle": "පළමු මුද්‍රණය · 2026 නොවැම්බර්",
       "thumbnailSource": "cover"
     },
     {

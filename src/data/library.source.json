@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-11-01T21:51:39.240Z",
+  "syncedAt": "2026-11-07T16:27:46.035Z",
   "sourceFolderUrl": "https://drive.google.com/drive/folders/13c8bRvGo7Q8PXgodwPIULewzQfsjP0Nq",
   "isDemo": false,
   "categories": [
@@ -8,7 +8,7 @@
       "id": "1rTV7SDQ6OOdiTS_wO0_ZmOko20X8pfi8",
       "name": "සදහම් පොත්",
       "slug": "sadaham-poth",
-      "publicationCount": 3
+      "publicationCount": 4
     },
     {
       "id": "1riBDcWWI0vzdaEK3eD51reDPlXDq--iE",
@@ -691,6 +691,28 @@
       "pageThumbnailUrl": "/library/thumbnails/page-1bXM9GWeIjm43ZEkAT_Dwi1StnUUa_n71.jpg",
       "fileSize": 592914,
       "modifiedTime": "2021-07-30T12:53:06.000Z"
+    },
+    {
+      "id": "1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9",
+      "driveFileId": "1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9",
+      "title": "තිසරණ සරණ - පළමු මුද්‍රණය 2026 නොවැම්බර්",
+      "slug": "2026-7",
+      "categoryId": "1rTV7SDQ6OOdiTS_wO0_ZmOko20X8pfi8",
+      "categoryName": "සදහම් පොත්",
+      "categorySlug": "sadaham-poth",
+      "author": null,
+      "publicationDate": null,
+      "summary": "",
+      "language": "si",
+      "featured": false,
+      "status": "published",
+      "pdfUrl": "https://drive.google.com/file/d/1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9/preview",
+      "downloadUrl": "https://drive.google.com/uc?id=1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9&export=download",
+      "thumbnailUrl": null,
+      "coverThumbnailUrl": "/library/thumbnails/cover-1iG4AfkPqCNjU1yXM-xpWT8NlALRacNus.jpg",
+      "pageThumbnailUrl": "/library/thumbnails/page-1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9.jpg",
+      "fileSize": 964875,
+      "modifiedTime": "2026-11-07T16:25:52.927Z"
     },
     {
       "id": "1UjYyad4eJ2TEYAU5fQigx6Es37ME4Ykc",

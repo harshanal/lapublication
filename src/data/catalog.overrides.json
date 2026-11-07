@@ -201,9 +201,29 @@
       "thumbnailMode": "page",
       "thumbnailTitle": "හේතුව දුක ලෙස දකිමින් සසරින් එතෙර වෙමු",
       "thumbnailSubtitle": "රංගිරි ශ්‍රී ලංකා · වප් 2026"
+    },
+    "1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9": {
+      "title": "තිසරණ සරණ",
+      "slug": "thisarana-sarana",
+      "summary": "නිවන් මඟ අවබෝධ කරගැනීමට උනන්දුවන පාඨකයන්ගේ ප්‍රශ්න හා පිළිතුරු ඇසුරින්, පටිච්චසමුප්පාදය, චතුරාර්ය සත්‍යය සහ ත්‍රිලක්ෂණය ප්‍රායෝගිකව විග්‍රහ කරන සදහම් ග්‍රන්ථයකි. පළමු මුද්‍රණය: 2026 නොවැම්බර්. ISBN 978-624-204-348-7.",
+      "author": "පූජ්‍යපාද මාපලගම සුසිලවංශ හිමිපාණන් වහන්සේ",
+      "publicationDate": null,
+      "categoryId": "1rTV7SDQ6OOdiTS_wO0_ZmOko20X8pfi8",
+      "language": "si",
+      "status": "published",
+      "featured": true,
+      "tags": ["තිසරණ සරණ", "2026 නොවැම්බර්", "පළමු මුද්‍රණය", "පටිච්චසමුප්පාදය", "චතුරාර්ය සත්‍යය", "ත්‍රිලක්ෂණය", "නිවන් මඟ"],
+      "thumbnailMode": "cover",
+      "thumbnailFileId": "1iG4AfkPqCNjU1yXM-xpWT8NlALRacNus",
+      "thumbnailTitle": "තිසරණ සරණ",
+      "thumbnailSubtitle": "පළමු මුද්‍රණය · 2026 නොවැම්බර්"
     }
   },
   "files": {
+    "1iG4AfkPqCNjU1yXM-xpWT8NlALRacNus": {
+      "role": "cover",
+      "publicationId": "1553Sx57MnNAPdSEelAdm1Y6-roJXmLF9"
+    },
     "1a6ccYjlRzZZzf6_HNWgnXxvkLop6UmxL": {
       "role": "cover",
       "publicationId": "1sOX_dtS0bVNmpY4TAlDjOJobz13qvQHx"
