@@ -55,7 +55,7 @@ export default function HomePage() {
       {books.length ? (
         <section className="section-band">
           <div className="section-heading"><div><p className="eyebrow">Books</p><h2>සදහම් පොත්</h2></div><Link href="/category/sadaham-poth">සියලු පොත්</Link></div>
-          <div className="publication-grid">{books.map((publication) => <PublicationCard key={publication.id} publication={publication} />)}</div>
+          <div className="publication-grid">{books.map((publication) => <PublicationCard key={publication.id} publication={publication} showAuthor={false} />)}</div>
         </section>
       ) : null}
 

@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/library";
 import type { Publication } from "@/lib/types";
 import { SaveButton } from "@/components/SaveButton";
 
-export function PublicationCard({ publication }: { publication: Publication }) {
+export function PublicationCard({ publication, showAuthor = true }: { publication: Publication; showAuthor?: boolean }) {
   const publicationDate = formatDate(publication.publicationDate);
 
   return (
@@ -17,7 +17,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
           {publication.categoryName}
         </Link>
         <h3><Link href={`/publications/${publication.slug}`}>{publication.title}</Link></h3>
-        {publication.author ? <p className="author-line">{publication.author}</p> : null}
+        {showAuthor && publication.author ? <p className="author-line">{publication.author}</p> : null}
         {publicationDate ? <div className="publication-meta"><span>{publicationDate}</span></div> : null}
         <div className="card-actions"><Link href={`/publications/${publication.slug}`}>කියවන්න →</Link><SaveButton id={publication.id} /></div>
       </div>
