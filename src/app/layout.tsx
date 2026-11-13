@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { LISTENER_QUESTIONS } from "@/lib/listener-questions";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </span>
           </Link>
           <nav className="main-nav" aria-label="ප්‍රධාන සංචාලනය">
+            <Link className="button-primary nav-question-link" href={LISTENER_QUESTIONS.path}>ශ්‍රාවක ප්‍රශ්න</Link>
             <Link href="/publications">සියලු ප්‍රකාශන</Link>
             <Link href="/publications?saved=1">♡ Bookmark</Link>
             <a href="https://lowthuruarana.net/">ප්‍රධාන වෙබ් අඩවිය</a>

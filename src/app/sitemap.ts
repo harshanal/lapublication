@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { library } from "@/lib/library";
 import { SITE_URL } from "@/lib/site";
+import { LISTENER_QUESTIONS } from "@/lib/listener-questions";
 
 export const dynamic = "force-static";
 
@@ -8,7 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const catalogueUpdated = library.syncedAt || undefined;
   const staticPages: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: catalogueUpdated, changeFrequency: "monthly", priority: 1 },
-    { url: `${SITE_URL}/publications`, lastModified: catalogueUpdated, changeFrequency: "monthly", priority: 0.9 }
+    { url: `${SITE_URL}/publications`, lastModified: catalogueUpdated, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}${LISTENER_QUESTIONS.path}`, changeFrequency: "yearly", priority: 0.7 }
   ];
   const categories: MetadataRoute.Sitemap = library.categories
     .filter((category) => category.publicationCount > 0)

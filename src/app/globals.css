@@ -22,9 +22,9 @@
 html { max-width: 100%; overflow-x: clip; color: var(--ink); background: var(--bg); }
 body { width: 100%; max-width: 100%; margin: 0; min-height: 100vh; overflow-x: clip; font-family: "Noto Sans Sinhala", "Nirmala UI", system-ui, sans-serif; line-height: 1.55; background: radial-gradient(circle at 10% 0%, rgba(255, 222, 132, 0.22), transparent 26%), var(--bg); }
 a { color: inherit; }
-button, input, select { font: inherit; }
+button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
 h1, h2, h3, p, dl { margin-top: 0; }
 h1 { margin-bottom: 12px; color: var(--maroon); font-size: clamp(1.65rem, 4vw, 3rem); line-height: 1.16; }
 h2 { margin-bottom: 6px; color: var(--maroon); font-size: clamp(1.22rem, 2.4vw, 1.6rem); }
@@ -36,7 +36,7 @@ h3 { margin-bottom: 6px; font-size: 1rem; line-height: 1.38; }
 .brand-lockup span { display: grid; min-width: 0; line-height: 1.18; }
 .brand-lockup strong { font-weight: 900; }
 .brand-lockup small { color: var(--muted); font-size: 0.78rem; font-weight: 800; }
-.main-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 16px; }
+.main-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 16px; }
 .main-nav a, .back-link, .section-heading > a { color: var(--maroon); font-weight: 900; text-decoration-color: var(--gold); text-underline-offset: 4px; }
 
 .app-shell { width: min(1440px, 100%); margin: 0 auto; padding: 24px clamp(12px, 3vw, 30px) 54px; }
@@ -54,6 +54,7 @@ h3 { margin-bottom: 6px; font-size: 1rem; line-height: 1.38; }
 .button-primary, .button-secondary { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: 9px 16px; border: 1px solid var(--maroon); border-radius: 8px; font-weight: 900; text-decoration: none; }
 .button-primary { color: #fff9ea; background: var(--maroon); }
 .button-primary:hover { background: var(--maroon-deep); }
+.main-nav .nav-question-link { color:#fff9ea; text-decoration:none; }
 .button-secondary { color: var(--maroon); background: var(--surface-gold); border-color: var(--gold); }
 .hero-artwork { display: grid; grid-template-rows: minmax(250px, 1fr) auto; min-width: 220px; align-self: stretch; place-items: center; margin: 0; }
 .hero-artwork img { width: min(100%, 350px); height: 100%; max-height: 390px; object-fit: contain; opacity: .92; filter: drop-shadow(0 16px 18px rgba(82, 37, 33, .12)); }
@@ -325,3 +326,40 @@ h2,h3 { line-height:1.65; }
 .detail-cover .thumbnail-caption { inset:24px 12px auto; }
 .detail-cover .thumbnail-caption strong { font-size:1.5rem; }
 @media (max-width:720px) { .thumbnail-caption { inset:20px 10px auto; gap:6px; padding:9px 4px 12px; } .thumbnail-caption strong { font-size:.95rem; line-height:1.8; } .thumbnail-caption > span { font-size:.68rem; } .detail-cover .thumbnail-caption strong { font-size:1rem; } }
+
+/* Listener questions: a homepage text link and a touch-friendly form. */
+.listener-question-link { display:inline-block; min-height:44px; max-width:100%; margin-top:12px; padding-block:8px; color:var(--maroon); font-size:.9rem; line-height:1.9; text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:4px; }
+.listener-question-link:hover { text-decoration-color:var(--maroon); }
+.question-shell { max-width:860px; }
+.question-card { margin-top:12px; padding:clamp(20px,4vw,40px); border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:12px; background:var(--surface); }
+.question-intro { padding-bottom:22px; border-bottom:1px solid var(--line); }
+.question-intro h1 { margin-block:10px 14px; }
+.question-intro > p { margin-bottom:10px; line-height:1.9; }
+.question-intro > p:last-child { margin-bottom:0; }
+.question-form { display:grid; gap:24px; padding-top:24px; }
+.question-required-note { margin:0; color:var(--muted); font-size:.8rem; line-height:1.9; }
+.question-field-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:22px; }
+.question-field { display:grid; min-width:0; gap:8px; }
+.question-field label { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 10px; color:var(--ink); font-size:.95rem; font-weight:700; }
+.question-field label span { color:var(--muted); font-size:.82rem; font-weight:400; }
+.question-field input,.question-field textarea { display:block; width:100%; min-width:0; min-height:52px; padding:12px 14px; color:var(--ink); background:white; border:1px solid #a59a87; border-radius:7px; font-size:1rem; line-height:1.8; }
+.question-field input::placeholder { color:var(--muted); opacity:1; font-size:.85rem; }
+.question-field textarea { min-height:220px; resize:vertical; }
+.question-field-help { margin:0; color:var(--muted); font-size:.78rem; line-height:1.9; overflow-wrap:anywhere; }
+.question-submit-area { display:grid; gap:12px; justify-items:start; }
+.question-submit { min-height:52px; max-width:100%; white-space:normal; line-height:1.8; }
+.question-submit:disabled { cursor:wait; opacity:.7; }
+.question-honeypot { display:none; }
+.question-thanks { display:grid; justify-items:center; gap:14px; padding-block:44px; text-align:center; }
+.question-thanks h1 { font-size:clamp(1.4rem,4vw,2rem); }
+.question-thanks > p,.question-thanks > h1 { margin:0; }
+.question-thanks .button-primary { margin-top:12px; }
+.question-thanks-icon { display:grid; place-items:center; width:58px; height:58px; margin-bottom:10px; color:var(--green); border:1px solid var(--green); border-radius:50%; background:#edf4e9; font-size:1.8rem; }
+@media (max-width:640px) {
+  .question-shell .breadcrumbs { font-size:.8rem; }
+  .question-card { padding:24px 18px; }
+  .question-intro .eyebrow { font-size:.72rem; }
+  .question-intro > p { font-size:.9rem; }
+  .question-field-pair { grid-template-columns:minmax(0,1fr); gap:24px; }
+  .question-submit { width:100%; font-size:.88rem; }
+}

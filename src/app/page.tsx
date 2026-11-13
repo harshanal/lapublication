@@ -4,6 +4,7 @@ import { CategoryTile } from "@/components/CategoryTile";
 import { PublicationCard } from "@/components/PublicationCard";
 import { selectVariedPublications } from "@/lib/homepage-selection";
 import { library, newestFirst } from "@/lib/library";
+import { LISTENER_QUESTIONS } from "@/lib/listener-questions";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -30,6 +31,7 @@ export default function HomePage() {
             <p>මෙම උතුම් ධර්ම දානය සියලු සත්වයන්ගේ නිවන් අවබෝධය පිණිසම හේතු වාසනා වේවා!</p>
           </div>
           <form action="/publications" className="hero-search"><label className="sr-only" htmlFor="home-search">ප්‍රකාශනය සොයන්න</label><input id="home-search" type="search" name="q" placeholder="ප්‍රකාශන මාතෘකාව සොයන්න…" /><button type="submit">ප්‍රකාශනය සොයන්න</button></form>
+          <Link className="listener-question-link" href={LISTENER_QUESTIONS.path}>ඔබට දහම් ප්‍රශ්නයක් ඇත්නම් යොමු කරන්න.</Link>
         </div>
         <figure className="hero-artwork">
           <Image src="/library/generated/buddha-hero.png" alt="" aria-hidden="true" width={1154} height={1216} priority />

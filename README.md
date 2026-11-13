@@ -71,6 +71,26 @@ A scan previews changes without replacing the published catalogue. Apply require
 
 The manager accepts writes only from its own local origin and serialises mutations. It has no public API in the deployed site. Keep `.env.local`, `.library`, and local image history out of Git. Commit the source inventory, overrides, public catalogue and all used image assets together.
 
+## Listener questions — Shraavaka Prashna
+
+The prominent **ශ්‍රාවක ප්‍රශ්න** button in the top menu and the homepage text link **ඔබට දහම් ප්‍රශ්නයක් ඇත්නම් යොමු කරන්න.** below the publication search link to `/question`, a mobile-friendly form with Sinhala/English labels for name, email, topic and a free-text question. Instructions are in Sinhala and the button is labelled **Submit**. Once deployed, other websites can link directly to `https://lapublication.vercel.app/question`; no library account or prior visit is needed. Use the same path on a future custom domain.
+
+The form uses [FormSubmit](https://formsubmit.co/) to email submissions to **harshanal@gmail.com**, preserving the static export without a backend, API key or database. The sender's email becomes Reply-To. Visitors submit a normal POST, complete FormSubmit's security check if prompted, and return to `/question/thank-you` on the same host. No success message is shown locally before the provider accepts the submission. With JavaScript disabled, the native form still works and returns to the canonical production domain.
+
+**One-time setup before sharing the form:**
+
+1. Open the form on the local HTTP preview or deployed site, submit an identifiable test question, and complete FormSubmit's CAPTCHA if shown.
+2. Open the activation email sent to **harshanal@gmail.com** (check Spam too) and confirm that this inbox may receive submissions from the form. Only the inbox owner does this; listeners never verify their email or create an account. Activation may be needed again for another website origin or a changed recipient.
+3. Submit another test and check that its name, email, topic and question arrive correctly, including Sinhala text, and that replying targets the listener. Do this on the final public domain before launch; a local test does not verify production delivery.
+
+The local preview was activated and a test email was received on 13 November 2026; Gmail placed it in Spam. Mark the message **Not spam** and check delivery again on the public domain. CAPTCHA reduces unwanted submissions but does not determine inbox placement. If Gmail continues classifying legitimate submissions as spam, an inbox filter or a mail provider with a verified sending domain may be needed.
+
+Recipient settings live in `src/lib/listener-questions.ts`. Change `endpoint` to change the primary recipient, or add addresses to `copyTo` to CC additional recipients, then rebuild and redeploy. FormSubmit also supplies a random endpoint token after activation; replace the email portion of `endpoint` with that token to hide the primary inbox address from page source. These are public form settings, not secrets.
+
+Spam protection includes FormSubmit's server-verified reCAPTCHA (kept enabled), its `_honey` spam-trap field, browser validation and field-length limits. The submit button also prevents accidental double clicks while navigating. Browser checks are usability safeguards; they do not provide a server-side submission quota or stop a determined human spammer. Keep CAPTCHA enabled and use the regular POST endpoint; AJAX delivery does not provide the same CAPTCHA flow. See the [FormSubmit documentation](https://formsubmit.co/documentation).
+
+Submissions contain personal information and pass through FormSubmit before reaching the recipients' email inboxes. No questions or email addresses are stored in this repository or the site's static hosting. FormSubmit documents a 30-day submission archive; review its [privacy policy](https://formsubmit.co/privacy.pdf) before public launch.
+
 ## Checks and production preview
 
 ```powershell
