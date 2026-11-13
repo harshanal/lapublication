@@ -21,7 +21,7 @@ function harness() {
           getValue: () => value(row, col),
           setValues(values: unknown[][]) { values.forEach((line, i) => line.forEach((v, j) => { rows[row + i - 1] ||= []; rows[row + i - 1][col + j - 1] = v; })); return range; },
           setValue(v: unknown) { return range.setValues([[v]]); },
-          setNumberFormat: () => range, clearContent: () => range.setValue(""),
+          setNumberFormat: () => { throw new Error("Cannot set the number format of cells in a typed column."); }, clearContent: () => range.setValue(""),
           getSheet: () => instance, getColumn: () => col, getRow: () => row, getNumColumns: () => m, getNumRows: () => n
         };
         return range;

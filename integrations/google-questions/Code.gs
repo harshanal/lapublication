@@ -103,8 +103,7 @@ function doPost(event) {
       data.id, new Date(received), questionText_(data.name), questionText_(data.email), questionText_(data.topic), questionText_(data.question),
       'New', '', '', '', '', 'Pending', ''
     ]]);
-    sheet.getRange(target, 2).setNumberFormat('yyyy-mm-dd hh:mm');
-    sheet.getRange(target, 9).setNumberFormat('yyyy-mm-dd');
+    // The native table owns date formatting; typed columns reject range formats.
     if (!ledger.getRange(1, 5).getValue()) ledger.getRange(1, 5).setValue('Content key');
     ledger.appendRow([data.id, new Date(received), data.clientKey, data.emailKey, data.contentKey]);
     SpreadsheetApp.flush();
@@ -166,7 +165,7 @@ function handleQuestionEdit(event) {
     if (!sheet.getRange(row, 1).getValue()) continue;
     const status = sheet.getRange(row, 7).getValue();
     const answered = sheet.getRange(row, 9);
-    if (status === 'Answered' && !answered.getValue()) answered.setValue(new Date()).setNumberFormat('yyyy-mm-dd');
+    if (status === 'Answered' && !answered.getValue()) answered.setValue(new Date());
     else if (status !== 'Answered') answered.clearContent();
   }
 }
