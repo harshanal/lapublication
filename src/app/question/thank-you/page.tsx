@@ -11,7 +11,7 @@ export default function QuestionThankYouPage() {
     <main id="main-content" className="app-shell question-shell">
       <section className="question-card question-thanks" aria-labelledby="thanks-title">
         <span className="question-thanks-icon" aria-hidden="true">✓</span>
-        <p className="eyebrow" lang="en">Shraavaka Prashna</p>
+        <p className="eyebrow" lang="si">ශ්‍රාවක ප්‍රශ්න</p>
         <h1 id="thanks-title">ඔබගේ ප්‍රශ්නය යොමු කළා. ස්තුතියි!</h1>
         <p>ඔබගේ ප්‍රශ්නයට ඉදිරි කාලයේදී දේශනාවක් තුළදී හෝ ලොව්තුරු අරණ සදහම් පුස්තකාලයේ ලිපියක් ලෙස පිළිතුරු ලැබෙනු ඇත.</p>
         <p>තෙරුවන් සරණයි!</p>
