@@ -43,7 +43,9 @@ function harness() {
   });
   vm.runInContext(source, context);
   function submit(overrides: Record<string, unknown> = {}, signature?: string) {
-    const payload = JSON.stringify({ id: randomUUID(), sentAt: Date.now(), name: "Listener", email: "listener@example.com", topic: "Dhamma", question: "=1+2 This must remain plain text", clientKey: "a".repeat(64), emailKey: "b".repeat(64), ...overrides });
+    const data = { id: randomUUID(), sentAt: Date.now(), name: "Listener", email: "listener@example.com", topic: "Dhamma", question: "=1+2 This must remain plain text", clientKey: "a".repeat(64), emailKey: "b".repeat(64), ...overrides };
+    const contentKey = createHmac("sha256", secret).update(`content:${JSON.stringify({ name: data.name, email: data.email, topic: data.topic, question: data.question })}`).digest("hex");
+    const payload = JSON.stringify({ ...data, contentKey });
     const result = context.doPost({ postData: { contents: JSON.stringify({ payload, signature: signature ?? createHmac("sha256", secret).update(payload).digest("hex") }) } });
     return JSON.parse(result.getContent());
   }
@@ -75,6 +77,7 @@ describe("Google Apps Script question storage", () => {
     expect(h.questions.rows[1][11]).toBe("Sent");
     expect(h.mail.sendEmail).toHaveBeenCalledWith(expect.objectContaining({ to: "harshanal@gmail.com", cc: "ladhammaquestion@gmail.com", replyTo: "listener@example.com" }));
     expect(h.submit({ id })).toMatchObject({ ok: true, duplicate: true });
+    expect(h.submit({ id, question: "A different question on the same token" })).toMatchObject({ ok: false, code: "conflict" });
     expect(h.questions.getLastRow()).toBe(2);
     expect(h.mail.sendEmail).toHaveBeenCalledTimes(1);
   });

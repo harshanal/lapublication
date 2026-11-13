@@ -65,7 +65,8 @@ export function createQuestionIntake(config: IntakeConfig, send: typeof fetch = 
       const payload = JSON.stringify({
         id: data.challenge.id, sentAt: now(), ...fields,
         clientKey: signQuestionValue(config.secret, `ip:${address}`),
-        emailKey: signQuestionValue(config.secret, `email:${fields.email.toLowerCase()}`)
+        emailKey: signQuestionValue(config.secret, `email:${fields.email.toLowerCase()}`),
+        contentKey: signQuestionValue(config.secret, `content:${JSON.stringify(fields)}`)
       });
       try {
         const response = await send(config.scriptUrl, {
@@ -77,6 +78,7 @@ export function createQuestionIntake(config: IntakeConfig, send: typeof fetch = 
         const result = response.ok ? await response.json() : null;
         if (result?.ok === true && result.id === data.challenge.id) return reply({ ok: true, id: result.id });
         if (result?.code === "rate_limit") return reply({ ok: false, code: "rate_limit" }, 429);
+        if (result?.code === "conflict") return reply({ ok: false, code: "conflict" }, 409);
         console.error("Question intake rejected", { id: data.challenge.id, status: response.status, code: result?.code || "upstream" });
       } catch {
         // Do not log names, addresses, question text, endpoint URLs or secrets.

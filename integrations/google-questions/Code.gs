@@ -16,7 +16,7 @@ function setupQuestionIntake() {
   let ledger = book.getSheetByName('_Intake');
   if (!ledger) {
     ledger = book.insertSheet('_Intake');
-    ledger.getRange(1, 1, 1, 4).setValues([['Submission ID', 'Received at', 'Client key', 'Email key']]);
+    ledger.getRange(1, 1, 1, 5).setValues([['Submission ID', 'Received at', 'Client key', 'Email key', 'Content key']]);
     ledger.hideSheet();
   }
   book.setSpreadsheetTimeZone('Europe/London');
@@ -51,7 +51,7 @@ function questionText_(value) {
 
 function questionValid_(data) {
   if (!data || !/^[0-9a-f-]{36}$/i.test(data.id || '') || !Number.isFinite(data.sentAt) || Math.abs(Date.now() - data.sentAt) > 300000) return false;
-  if (!/^[0-9a-f]{64}$/.test(data.clientKey || '') || !/^[0-9a-f]{64}$/.test(data.emailKey || '')) return false;
+  if (!/^[0-9a-f]{64}$/.test(data.clientKey || '') || !/^[0-9a-f]{64}$/.test(data.emailKey || '') || !/^[0-9a-f]{64}$/.test(data.contentKey || '')) return false;
   const rules = [['name', 1, 120], ['email', 3, 254], ['topic', 1, 160], ['question', 10, 5000]];
   if (!rules.every(function(rule) { const value = data[rule[0]]; return typeof value === 'string' && value.trim().length >= rule[1] && value.length <= rule[2] && !/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(value); })) return false;
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email);
@@ -83,13 +83,15 @@ function doPost(event) {
     const ledger = book.getSheetByName('_Intake');
     if (!sheet || !ledger) return questionJson_({ ok: false, code: 'not_configured' });
     const ids = sheet.getRange(2, 1, sheet.getMaxRows() - 1, 1).getValues().map(function(row) { return row[0]; });
+    const records = ledger.getLastRow() > 1 ? ledger.getRange(2, 1, ledger.getLastRow() - 1, 5).getValues() : [];
     const existing = ids.indexOf(data.id);
     if (existing >= 0) {
+      const original = records.find(function(row) { return row[0] === data.id; });
+      if (original && original[4] && original[4] !== data.contentKey) return questionJson_({ ok: false, code: 'conflict' });
       questionSendEmail_(sheet, existing + 2);
       return questionJson_({ ok: true, id: data.id, duplicate: true });
     }
     const received = Date.now();
-    const records = ledger.getLastRow() > 1 ? ledger.getRange(2, 1, ledger.getLastRow() - 1, 4).getValues() : [];
     const recent = records.filter(function(row) { return received - new Date(row[1]).getTime() < 86400000; });
     const hourly = recent.filter(function(row) { return received - new Date(row[1]).getTime() < 3600000; });
     if (recent.length >= 100 || recent.filter(function(row) { return row[3] === data.emailKey; }).length >= 8 || hourly.filter(function(row) { return row[3] === data.emailKey; }).length >= 3 || hourly.filter(function(row) { return row[2] === data.clientKey; }).length >= 20) return questionJson_({ ok: false, code: 'rate_limit' });
@@ -103,7 +105,8 @@ function doPost(event) {
     ]]);
     sheet.getRange(target, 2).setNumberFormat('yyyy-mm-dd hh:mm');
     sheet.getRange(target, 9).setNumberFormat('yyyy-mm-dd');
-    ledger.appendRow([data.id, new Date(received), data.clientKey, data.emailKey]);
+    if (!ledger.getRange(1, 5).getValue()) ledger.getRange(1, 5).setValue('Content key');
+    ledger.appendRow([data.id, new Date(received), data.clientKey, data.emailKey, data.contentKey]);
     SpreadsheetApp.flush();
     questionSendEmail_(sheet, target);
     return questionJson_({ ok: true, id: data.id });

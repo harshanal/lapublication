@@ -77,9 +77,9 @@ export function ListenerQuestionForm({ endpoint, copyTo, returnUrl }: Props) {
         });
         const result = await response.json();
         if (response.ok && result.ok) { window.location.assign(nextUrl); return; }
-        if (result.code === "challenge") {
+        if (result.code === "challenge" || result.code === "conflict") {
           setAttempt((value) => value + 1);
-          setError("පෝරමයේ කාලය ඉකුත් වී හෝ ඉතා ඉක්මනින් යොමු කර ඇත. මොහොතකින් නැවත Submit කරන්න.");
+          setError(result.code === "conflict" ? "පෙර යැවීමක් හමු විය. වෙනස් කළ ප්‍රශ්නය යැවීමට මොහොතකින් නැවත Submit කරන්න." : "පෝරමයේ කාලය ඉකුත් වී හෝ ඉතා ඉක්මනින් යොමු කර ඇත. මොහොතකින් නැවත Submit කරන්න.");
         } else if (result.code === "rate_limit") {
           setError("කෙටි කාලයක් තුළ ප්‍රශ්න කිහිපයක් යොමු කර ඇත. කරුණාකර පසුව නැවත උත්සාහ කරන්න.");
         } else {
