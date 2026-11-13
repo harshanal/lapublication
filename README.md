@@ -75,7 +75,7 @@ The manager accepts writes only from its own local origin and serialises mutatio
 
 The prominent **ශ්‍රාවක ප්‍රශ්න** button in the top menu and the homepage text link **ඔබට දහම් ප්‍රශ්නයක් ඇත්නම් යොමු කරන්න.** below the publication search link to `/question`, a mobile-friendly form with Sinhala/English labels for name, email, topic and a free-text question. Instructions are in Sinhala and the button is labelled **Submit**. Once deployed, other websites can link directly to `https://lapublication.vercel.app/question`; no library account or prior visit is needed. Use the same path on a future custom domain.
 
-The form uses [FormSubmit](https://formsubmit.co/) to email submissions to **harshanal@gmail.com**, preserving the static export without a backend, API key or database. The sender's email becomes Reply-To. Visitors submit a normal POST, complete FormSubmit's security check if prompted, and return to `/question/thank-you` on the same host. No success message is shown locally before the provider accepts the submission. With JavaScript disabled, the native form still works and returns to the canonical production domain.
+The form uses [FormSubmit](https://formsubmit.co/) to email submissions to **harshanal@gmail.com**, with a duplicate copy to **ladhammaquestion@gmail.com**, preserving the static export without a backend, API key or database. The sender's email becomes Reply-To. Visitors submit a normal POST, complete FormSubmit's security check if prompted, and return to `/question/thank-you` on the same host. No success message is shown locally before the provider accepts the submission. With JavaScript disabled, the native form still works and returns to the canonical production domain.
 
 **One-time setup before sharing the form:**
 

@@ -5,5 +5,5 @@ export const LISTENER_QUESTIONS = {
   thankYouPath: "/question/thank-you",
   endpoint: "https://formsubmit.co/harshanal@gmail.com",
   // Add future recipients here. FormSubmit accepts a comma-separated CC list.
-  copyTo: [] as string[]
+  copyTo: ["ladhammaquestion@gmail.com"]
 };
