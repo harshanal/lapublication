@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function ListenerQuestionsPage() {
+  const googleIntakeReady = Boolean(process.env.QUESTIONS_SCRIPT_URL && process.env.QUESTIONS_SHARED_SECRET);
   return (
     <main id="main-content" className="app-shell question-shell">
       <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">මුල් පිටුව</Link><span aria-hidden="true">/</span><span aria-current="page">ශ්‍රාවක ප්‍රශ්න</span></nav>
@@ -25,7 +26,7 @@ export default function ListenerQuestionsPage() {
           <h1 id="question-title">ශ්‍රාවක ප්‍රශ්න</h1>
           <p>ධර්ම ශ්‍රවණයේදී හෝ කියවීමේදී මතු වූ ඔබගේ ප්‍රශ්න අප වෙත යොමු කරන්න.</p>
         </div>
-        <ListenerQuestionForm endpoint={LISTENER_QUESTIONS.endpoint} copyTo={LISTENER_QUESTIONS.copyTo} returnUrl={`${SITE_URL}${LISTENER_QUESTIONS.thankYouPath}`} />
+        <ListenerQuestionForm endpoint={googleIntakeReady ? "/api/questions" : LISTENER_QUESTIONS.endpoint} copyTo={LISTENER_QUESTIONS.copyTo} returnUrl={`${SITE_URL}${LISTENER_QUESTIONS.thankYouPath}`} />
       </section>
     </main>
   );

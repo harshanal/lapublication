@@ -1,6 +1,6 @@
 # Lowthuru Arana library
 
-A Sinhala-first publication library with a fully static public website and a local management studio. PDFs stay in Google Drive. Catalogue metadata is versionable JSON; covers and generated thumbnails are small static assets. There is no database, scheduled sync, hosted admin backend or runtime AI dependency.
+A Sinhala-first publication library with prerendered public pages, a listener-question intake API and a local management studio. PDFs stay in Google Drive. Catalogue metadata is versionable JSON; covers and generated thumbnails are small static assets. There is no database, hosted admin backend or runtime AI dependency.
 
 Read [REVIEW.md](REVIEW.md) for the review findings, architecture decisions, cost assumptions and remaining work. No Vercel deployment has been made as part of this review.
 
@@ -73,6 +73,8 @@ The manager accepts writes only from its own local origin and serialises mutatio
 
 ## Listener questions — Shraavaka Prashna
 
+The Google Sheet + email integration is documented in [integrations/google-questions/README.md](integrations/google-questions/README.md). It enables manual **New / In progress / Answered** tracking, an answered date, assignment and response notes. Until its two server environment settings are configured and the site is rebuilt, the existing FormSubmit email flow below stays active.
+
 The prominent **ශ්‍රාවක ප්‍රශ්න** button in the top menu and the homepage text link **ඔබට දහම් ප්‍රශ්නයක් ඇත්නම් යොමු කරන්න.** below the publication search link to `/question`, a mobile-friendly form with Sinhala/English labels for name, email, topic and a free-text question. Instructions are in Sinhala and the button is labelled **Submit**. Once deployed, other websites can link directly to `https://lapublication.vercel.app/question`; no library account or prior visit is needed. Use the same path on a future custom domain.
 
 The form uses [FormSubmit](https://formsubmit.co/) to email submissions to **harshanal@gmail.com**, with a duplicate copy to **ladhammaquestion@gmail.com**, preserving the static export without a backend, API key or database. The sender's email becomes Reply-To. Visitors submit a normal POST, complete FormSubmit's security check if prompted, and return to `/question/thank-you` on the same host. No success message is shown locally before the provider accepts the submission. With JavaScript disabled, the native form still works and returns to the canonical production domain.
@@ -100,10 +102,10 @@ pnpm build
 pnpm start
 ```
 
-`pnpm build` rebuilds the catalogue from the source inventory and overrides, then generates static output in `out`. It never scans Drive or generates images. `pnpm start` serves the static output on http://127.0.0.1:3012; stop the development server first to free that port.
+`pnpm build` rebuilds the catalogue from the source inventory and overrides, prerenders the public pages and builds the question intake API. It never scans Drive or generates images. `pnpm start` serves the production Next.js build on http://127.0.0.1:3012; stop the development server first to free that port.
 
 ## Vercel setup when ready
 
-Import the repository as a Next.js project in Vercel. Use the repository's `pnpm build` command and the static export produced by Next.js. No production environment variables, database or cron jobs are required. All public pages are generated in advance.
+Use the linked Next.js project in Vercel with the repository's `pnpm build` command. Public reading pages are generated in advance. Google question intake requires the two private server environment settings documented above; its email retry and answer-date triggers run in the owner's Apps Script project. No database is required.
 
 The current working directory has no initial Git commit or remote, and read-only Git verification reports missing objects in the existing index. Preserve the working files and resolve that repository state before setting up Git-based deployment. Do not reset or discard the staged files. This review did not change the Git index or publish anything.

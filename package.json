@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev --webpack -H 127.0.0.1 -p 3012",
     "build": "tsx scripts/build-catalogue.ts && next build",
-    "start": "node scripts/serve-static.mjs",
+    "start": "next start -H 127.0.0.1 -p 3012",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run src",

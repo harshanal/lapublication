@@ -4,6 +4,6 @@ export const LISTENER_QUESTIONS = {
   path: "/question",
   thankYouPath: "/question/thank-you",
   endpoint: "https://formsubmit.co/harshanal@gmail.com",
-  // Add future recipients here. FormSubmit accepts a comma-separated CC list.
+  // FormSubmit fallback copies. Google-mode recipients are in Code.gs.
   copyTo: ["ladhammaquestion@gmail.com"]
 };

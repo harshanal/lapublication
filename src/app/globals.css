@@ -349,6 +349,7 @@ h2,h3 { line-height:1.65; }
 .question-submit-area { display:grid; gap:12px; justify-items:start; }
 .question-submit { min-height:52px; max-width:100%; white-space:normal; line-height:1.8; }
 .question-submit:disabled { cursor:wait; opacity:.7; }
+.question-form-error { margin:0; color:var(--red); line-height:1.9; font-size:.85rem; }
 .question-honeypot { display:none; }
 .question-thanks { display:grid; justify-items:center; gap:14px; padding-block:44px; text-align:center; }
 .question-thanks h1 { font-size:clamp(1.4rem,4vw,2rem); }
